@@ -1,0 +1,16 @@
+class Microwave
+    def initialize(btn)
+      @btn = buttons
+    end
+  
+    def convert_to_time
+      sec = @btn.to_i
+      min = seconds / 60
+      sec = seconds % 60
+      format('%02d:%02d', minutes, seconds)
+    end
+  end
+  
+  microwave = Microwave.new('90')
+  puts microwave.convert_to_time 
+  

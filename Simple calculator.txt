@@ -1,0 +1,41 @@
+class SimpleCalculator
+  def self.calculate(n1, n2, op)
+    begin
+      case operation
+      when "+"
+        result = n1 + n2
+      when "-"
+        result = n1 - n2
+      when "/"
+        result = n1 / n2
+
+      when "*"
+        result = n1 * n2
+     
+      else
+        raise "Invalid operation. Only +, -, *, and / are allowed."
+      end
+
+      "#{n1} #{op} #{n2} = #{rst}"
+    rescue ZeroDivisionError
+      "Cannot divide by zero."
+    end
+  end
+end
+puts SimpleCalculator.calculate(10, 0, "/")
+# => "Cannot divide by zero."
+
+puts SimpleCalculator.calculate(32, 6, "*")
+# => "32 * 6 = 192"
+
+puts SimpleCalculator.calculate(16, 51, "+")
+# => "16 + 51 = 67"
+
+
+puts SimpleCalculator.calculate(512, 4, "/")
+# => "512 / 4 = 128"
+
+
+
+puts SimpleCalculator.calculate(5, 3, "%")
+
